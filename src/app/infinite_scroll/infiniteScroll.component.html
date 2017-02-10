@@ -1,0 +1,14 @@
+<div ngClass="comments"
+ infinite-scroll
+ [infiniteScrollDistance]="20"
+ [infiniteScrollThrottle]="1000"
+ (scrolled)="onScrollDown()">
+    <div ngClass="inner-comments" *ngFor="let post of postsToShow">
+        <div ngClass="image"></div>
+            <span><label><strong>Post Id : </strong></label>{{post.postId}}</span> <br />
+            <span><label><strong>Id : </strong></label>{{post.id}}</span> <br />
+            <span><label><strong>Name : </strong></label>{{post.name}}</span> <br />
+            <span><label><strong>Email : </strong></label>{{post.email}}</span> <br />
+            <span><label><strong>Body : </strong></label>{{post.body}}</span><br />
+    </div>
+</div>
